@@ -1,0 +1,29 @@
+broadcasting is extending an array to a shape in which the operatons can be performed
+-------------------------------------------------------------------------------------------------
+[one_d_array_h = np.array([1,1,1])
+two_d_array_h = np.array([[1,1,1],[2,2,2]])
+adding = one_d_array_h+two_d_array_h
+print(adding)]
+---------------------------------------------------------------------------------------------------
+in this [1,1,1] array is transformed into [[1,1,1],[1,1,1]] by default
+this is called broadcasting
+-------------------------------------------------------------------------------------------------
+another example is when arr+5,
+lets assume arr = [1,2,3]
+so 5 will extend to [5,5,5] by default it will make its shape 
+desired so that it can be added
+This is broadcasting.....
+---------------------------------------------------------------------------------------------------
+Now Vectorizaton:
+after broadcasting the whole operation which incude adding element 
+sequence wise is called Vectorizaton
+---------------------------------------------------------------------------------------------------
+|VISUAL BREAKDOWN                      |
+|arr + 5                               |
+|     ↑                                |
+|broadcasting (scalar stretched)       |
+|                                      |
+|entire expression:                    |
+|arr + 5                               | 
+|↑ whole operation uses vectorization  |
+----------------------------------------
