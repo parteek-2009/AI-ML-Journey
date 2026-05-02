@@ -1,0 +1,182 @@
+📌 1. Import NumPy
+import numpy as np
+📌 2. Why NumPy?
+
+✅ Faster than Python lists
+✅ Less memory
+✅ Vectorized operations
+✅ Used in Pandas / ML / AI / Data Science
+
+📌 3. Creating Arrays
+1D Array
+a = np.array([1,2,3,4])
+2D Array
+b = np.array([[1,2],[3,4]])
+3D Array
+c = np.array([[[1,2],[3,4]]])
+📌 4. Special Arrays
+np.zeros((2,3))
+np.ones((3,2))
+np.full((2,2), 9)
+np.eye(3)
+np.arange(1,10,2)
+np.linspace(0,1,5)
+
+✅ Practice: What does np.arange(2,20,3) return?
+
+📌 5. Array Properties
+a.ndim
+a.shape
+a.size
+a.dtype
+a.itemsize
+
+Example:
+
+arr = np.array([[1,2,3],[4,5,6]])
+ndim = ?
+shape = ?
+size = ?
+
+👉 Answers: 2, (2,3), 6
+
+📌 6. Indexing
+a = np.array([10,20,30,40])
+
+a[0]
+a[-1]
+a[1]
+2D
+arr = np.array([[1,2],[3,4]])
+
+arr[0,1]
+arr[1,0]
+📌 7. Slicing
+a[1:4]
+a[:3]
+a[::2]
+a[::-1]
+
+✅ Practice:
+
+[5,10,15,20,25]
+
+Get [10,20]
+
+📌 8. Reshape
+a = np.array([1,2,3,4,5,6])
+
+a.reshape(2,3)
+a.reshape(3,2)
+📌 9. Flattening
+arr.flatten()
+arr.ravel()
+Difference:
+
+✅ flatten() copy
+✅ ravel() view
+
+📌 10. Mathematical Operations
+a + 2
+a - 2
+a * 2
+a / 2
+a ** 2
+Array + Array
+x + y
+x * y
+📌 11. Universal Functions
+np.sqrt(a)
+np.sin(a)
+np.cos(a)
+np.exp(a)
+np.log(a)
+np.abs(a)
+📌 12. Aggregation Functions
+np.sum(a)
+np.mean(a)
+np.max(a)
+np.min(a)
+np.std(a)
+np.var(a)
+np.median(a)
+📌 13. Axis Concept (VERY IMPORTANT)
+arr = np.array([[1,2,3],
+                [4,5,6]])
+Column Wise
+np.sum(arr, axis=0)
+
+Result:
+
+[5,7,9]
+Row Wise
+np.sum(arr, axis=1)
+
+Result:
+
+[6,15]
+📌 14. Broadcasting
+arr + 10
+
+Adds 10 to all.
+
+arr + np.array([1,2,3])
+
+Adds row-wise.
+
+📌 15. Boolean Masking
+a[a > 5]
+a[a % 2 == 0]
+a[(a > 2) & (a < 8)]
+📌 16. Copy vs View
+b = a.copy()
+c = a.view()
+
+✅ copy = independent
+✅ view = linked
+
+📌 17. Joining Arrays
+np.concatenate((a,b))
+np.vstack((a,b))
+np.hstack((a,b))
+📌 18. Splitting Arrays
+np.split(a,2)
+np.hsplit(arr,2)
+np.vsplit(arr,2)
+📌 19. Insert / Delete / Append
+np.append(a,99)
+np.insert(a,1,50)
+np.delete(a,2)
+
+2D:
+
+np.delete(arr,0,axis=0)
+np.delete(arr,1,axis=1)
+📌 20. Sorting
+np.sort(a)
+np.argsort(a)
+📌 21. Unique Values
+np.unique(a)
+np.unique(a, return_counts=True)
+📌 22. Random Module
+np.random.rand(3)
+np.random.randn(3)
+np.random.randint(1,10,5)
+np.random.shuffle(a)
+np.random.seed(42)
+📌 23. NaN and Infinity
+np.nan
+np.inf
+
+Check:
+
+np.isnan(arr)
+np.isinf(arr)
+
+Replace:
+
+np.nan_to_num(arr)
+📌 24. Matrix Operations
+a.T
+np.dot(a,b)
+a @ b
